@@ -11,13 +11,13 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #1c1c1e;
-        color: #f0f0f0;
+        background-color: #f4f4f9;
+        color: #333;
         line-height: 1.6;
         transition: background-color 0.3s ease, color 0.3s ease;
       }
       header {
-        background-color: #000;
+        background-color: #111;
         padding: 20px 0;
         text-align: center;
         animation: fadeIn 1s ease-in-out;
@@ -30,8 +30,8 @@
         padding: 30px;
         max-width: 1000px;
         margin: auto;
-        background: #2c2c2e;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        background: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
         animation: slideUp 0.6s ease-in-out;
       }
@@ -63,7 +63,7 @@
         font-size: 12px;
         display: block;
         margin: 20px auto;
-        color: #999;
+        color: #666;
         text-align: center;
       }
       rodap p {
@@ -88,6 +88,6 @@
     </style>
   </head>
   <body>
-    <!-- Conteúdo mantido conforme original, agora com tema escuro, responsivo, com ícones e animações -->
+    <!-- Conteúdo mantido conforme original, agora com tema claro, responsivo, com ícones e animações -->
   </body>
 </html>
