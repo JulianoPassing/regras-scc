@@ -1,672 +1,254 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Regras do Servidor - Street Car Club Roleplay</title>
-        <link rel="icon" href="https://i.imgur.com/zrPywNW.png" type="image/png"> <!-- Favicon adicionado -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="icon" href="https://i.imgur.com/zrPywNW.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Estilos e Animações */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --primary-color: #3a7dca; /* Azul do logo */
+            --secondary-color: #ffffff;
+            --background-color: #1a1a2e; /* Fundo escuro temático */
+            --card-background-color: #162447; /* Fundo dos cards de regras */
+            --text-color: #e0e0e0;
+            --header-footer-bg: #1f4068;
+            --border-color: #3a7dca;
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-footer-bg);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--border-color);
+        }
+
+        .logo img {
+            max-width: 350px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05); /* Animação de pulso ao passar o mouse */
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .rules-section {
+            background-color: var(--card-background-color);
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        h2 .fas { /* Ícone antes do título */
+            margin-right: 15px;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        b {
+            color: var(--primary-color);
+        }
+        
+        rodap {
+            display: block;
+            background-color: var(--header-footer-bg);
+            color: var(--secondary-color);
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
     <header>
-      <center>
         <div class="logo">
-          <img
-            src="https://i.imgur.com/GWaXxTS.png"
-            alt="Street Car Club Roleplay Logo"
-          />
+            <img src="https://i.imgur.com/GWaXxTS.png" alt="Street Car Club Roleplay Logo" />
         </div>
     </header>
 
     <main>
-      <section id="servidor" class="rules-section">
-        <center>
-          <h2>Regras do Servidor</h2>
-        </center>Em hipótese alguma leve um assunto do RP para o discord, seja no discord da cidade ou no privado de outro jogador. O QUE ACONTECE NO RP, FICA NO RP.
+        <section id="servidor" class="rules-section">
+            <h2><i class="fas fa-server"></i>Regras do Servidor</h2>
+            <p>Em hipótese alguma leve um assunto do RP para o discord, seja no discord da cidade ou no privado de outro jogador. <b>O QUE ACONTECE NO RP, FICA NO RP.</b></p>
+            <p>A <b>Street Car Club Roleplay</b> não compactua com nenhum tipo de homofobia, assédio, preconceito, abuso, racismo, pedofilia, flaming e/ou qualquer outro discurso de ódio dentro e fora do servidor. Todos esses atos são passíveis de BANIMENTO PERMANENTE conforme o julgamento da staff, sem nenhum aviso prévio.</p>
+        </section>
 
-        <p>
-          A <b>Street Car Club Roleplay</b> não compactua com nenhum tipo de homofobia,
-          assédio, preconceito, abuso, racismo, pedofilia, flaming e/ou qualquer
-          outro discurso de ódio dentro e fora do servidor. Todos esses atos são
-          passíveis de BANIMENTO PERMANENTE conforme o julgamento da staff, sem
-          nenhum aviso prévio.
-        </p>
-      </section>
+        <section id="discord" class="rules-section">
+            <h2><i class="fab fa-discord"></i>Regras do Discord</h2>
+            <ol>
+                <li>Proibido uso de linguagens ofensiva, racista, homofóbica e xenofóbica, publicação de material calunioso, abusivo ou que invada a privacidade de alguém.</li>
+                <li>Todas e quaisquer denúncias, só serão aceitas se preenchidas de forma correta atendendo os requisitos solicitados: vídeos (duração mínima de 1 minuto), descrição e Informações dos Players (quando possível). Denúncias de mais de 24h do ocorrido não serão aceitas.</li>
+                <li>Proibido a divulgação de outros servidores de qualquer tipo no discord, na cidade ou no privado dos nossos membros. O descumprimento poderá resultar em banimento.</li>
+                <li>O Discord já tem seus canais definidos para cada situação. Use-os corretamente e de acordo com a necessidade.</li>
+                <li>Proibido promover qualquer tipo de desordem e brigas no discord, sendo passível de advertência e banimento sem aviso prévio.</li>
+                <li>Proibido ir até o privado de qualquer um da staff, pedindo que seja feito algo dentro do servidor, por exemplo: liberar WL, adicionar recursos, pedir set, etc.</li>
+                <li>É terminantemente proibido perguntar qual emprego fornece maior valor financeiro, qual mais compensa trabalhar, como também onde ficam facções, organizações e outros serviços que devem ser descobertos dentro da cidade.</li>
+                <li>Em hipótese alguma leve um assunto do RP para o discord, seja no discord da cidade ou no privado de outro jogador. <b>O QUE ACONTECE NO RP, FICA NO RP.</b></li>
+                <li>É estritamente proibido utilizar versões modificadas do Discord (mods) para visualizar tickets ou chamadas privadas da cidade.</li>
+            </ol>
+        </section>
 
-      <section id="discord" class="rules-section">
-        <center>
-          <h2>Regras do Discord</h2>
-        </center>
-        <ol>
-          <li>
-            Proibido uso de linguagens ofensiva, racista, homofóbica e
-            xenofóbica, publicação de material calunioso, abusivo ou que invada
-            a privacidade de alguém.
-          </li>
-          <li>
-            Todas e quaisquer denúncias, só serão aceitas se preenchidas de
-            forma correta atendendo os requisitos solicitados: vídeos (duração
-            mínima de 1 minuto), descrição e Informações dos Players (quando
-            possível). Denúncias de mais de 24h do ocorrido não serão aceitas.
-          </li>
-          <li>
-            Proibido a divulgação de outros servidores de qualquer tipo no
-            discord, na cidade ou no privado dos nossos membros. O
-            descumprimento poderá resultar em banimento.
-          </li>
-          <li>
-            O Discord já tem seus canais definidos para cada situação. Use-os
-            corretamente e de acordo com a necessidade.
-          </li>
-          <li>
-            Proibido promover qualquer tipo de desordem e brigas no discord,
-            sendo passível de advertência e banimento sem aviso prévio.
-          </li>
-          <li>
-            Proibido ir até o privado de qualquer um da staff, pedindo que seja
-            feito algo dentro do servidor, por exemplo: liberar WL, adicionar
-            recursos, pedir set, etc.
-          </li>
-          <li>
-            É terminantemente proibido perguntar qual emprego fornece maior
-            valor financeiro, qual mais compensa trabalhar, como também onde
-            ficam facções, organizações e outros serviços que devem ser
-            descobertos dentro da cidade.
-          </li>
-          <li>
-            Em hipótese alguma leve um assunto do RP para o discord, seja no
-            discord da cidade ou no privado de outro jogador. O QUE ACONTECE NO
-            RP, FICA NO RP.
-          </li>
-          <li>É estritamente proibido utilizar versões modificadas do Discord (mods) para visualizar tickets ou chamadas privadas da cidade</li>
-        </ol>
-      </section>
+        <section id="gerais" class="rules-section">
+            <h2><i class="fas fa-gavel"></i>Regras Gerais</h2>
+            <ol>
+                <li>Todos os players devem estar atentos às regras do servidor, com base no seu RP que está desenvolvendo. Caso não siga as regras, estão sujeitos a advertências que podem ou não ser notificadas previamente.</li>
+                <li>Proibido uso de linguagens ofensiva, racista, homofóbica e xenofobia, publicação de material calunioso, abusivo ou que invada a privacidade de alguém.</li>
+                <li>É proibido o RDM, VDM, Powergaming, Metagaming, CarParking.</li>
+                <li>É proibido o uso de cheating e programas auxiliares de mira, abusar de exploits e bugs para se beneficiar.</li>
+                <li>É proibido qualquer tipo de coop bait. O conceito de coop bait (ou "isca para cooperação") geralmente refere-se a situações em que jogadores simulam cenários ou comportamentos que incentivam a cooperação, mas com intenções secundárias que podem incluir enganos ou armadilhas.</li>
+                <li>É proibido agir sem amor à vida do personagem.</li>
+                <li>Você não pode sair do roleplay em nenhum momento e de nenhuma forma, podendo acabar em uma punição.</li>
+                <li>Faça o roleplay, sem levar para o pessoal. O que acontece no RP fica no RP. Então fica proibido levar qualquer assunto para fora do RP, indo no privado ou até mesmo no discord da cidade.</li>
+                <li>É totalmente proibido fazer qualquer chamado de qualquer serviço com a intenção de assaltar ou emboscar alguém.</li>
+                <li>É totalmente proibido qualquer tipo de roubo ou furto no servidor. Descumprir essa regra poderá resultar em advertência ou banimento imediato.</li>
+                <li>Trate os policiais da forma que você trataria eles na vida real, não provoque eles e não os xingue atoa.</li>
+                <li>Quando você é nocauteado ou morto, é <b>PROIBIDO</b> lembrar-se do que ocorreu durante a ação, mesmo se o paramédico prestar atendimento; além disso, mesmo que alguém lhe relembre, você não pode voltar à ação.</li>
+                <li>Usar máscaras torna sua identidade irreconhecível, para a voz é recomendado utilizar modificadores, sugestão: "ClownFish", "VoiceMod", "MorphVox", "Voxal Voice Changer".</li>
+                <li>Em nenhuma hipótese os jogadores devem roubar uma viatura do HOSPITAL ou da POLÍCIA;</li>
+                <li>Você deve respeitar o RP dos paramédicos e dos policiais por mais que não concorde com a conduta;</li>
+                <li>Caso sofra alguma situação constrangedora, ou que ao seu ver infrinja as regras, tire prints, produza provas e envie para alguém do suporte.</li>
+                <li>É proibido permanecer com a roupa padrão inicial do servidor.</li>
+                <li>É proibido utilizar a farda da Polícia e se passar por um policial.</li>
+                <li>É proibido intervir em abordagem policial.</li>
+                <li>Proibido usar veículos de profissões legais para qualquer tipo de atividade que não seja da profissão.</li>
+                <li>Proibido o uso de máscara nos seguintes locais: HOSPITAL, DP DE POLÍCIA, MECÂNICA, PRAÇA E ESTABELECIMENTOS COMERCIAIS.</li>
+                <li>É proibido o roubo a qualquer trabalhador de legal.</li>
+                <li>Os nomes devem ser coerentes com a realidade, sem conotação sexual ou nomes de marcas. O uso de um nome diferente na cidade e no e-mail resultará em advertência, podendo levar à exclusão do personagem, além de uma multa de R$ 100.000 e prisão de até 50 meses por falsidade ideológica. Para mudar de nome, é necessário ir à polícia, pagar R$ 25.000 e apresentar um motivo plausível em um ticket aberto.</li>
+                <li>Todas as patentes da policia, e o cargo de Juíz(a) <b>NÃO PODEM TER NENHUM ENVOLVIMENTO COM AS ATIVIDADES ILEGAIS DA CIDADE.</b></li>
+                <li>É terminantemente proibido o farm de salário dos benefícios VIPs e empregos legais.</li>
+                <li>Ao sair de um serviço legal/ilegal e ir para outro legal/ilegal, você deve esperar o prazo de 7 dias para ter um novo set.</li>
+                <li>Em caso de prisão de qualquer cidadão que possua carteira assinada, esta deverá ser dada baixa em função da cadeia aplicada.</li>
+                <li>É proibido agir de má fé, anunciar produtos que não condizem com a realidade e tentar enganar os demais por motivos financeiros e/ou pessoais.</li>
+                <li>Benefícios vips, são pessoais e intransferíveis, fica terminantemente proibida a vendas de bens adquiridos por moedas.</li>
+                <li>Os benefícios VIP não são reembolsáveis sob alegações de insatisfação, ausência da cidade, banimentos ou advertências.</li>
+                <li>Enviar faturas, multas e/ou quaisquer outras cobranças indevidas a moradores, é passível de punição interna no serviço.</li>
+                <li>Fazer caixa 2 em qualquer organização legal, resultará em banimento ou PD, perda do personagem.</li>
+                <li>Qualquer tipo de zaralho, quebras bruscas de regras, desobediência à ordem dos staffs, será punido com BAN, sem direito a segunda chance.</li>
+                <li>Em caso de não conexão por um prazo superior a 90 dias no servidor, a WL e os bens do player serão removidos automaticamente para otimização em nosso banco de dados.</li>
+                <li>A administração do servidor não se responsabiliza pela perda de personagens ou itens em decorrência de problemas técnicos, bugs, ações de outros jogadores ou decisões tomadas pelos usuários. Ao participar do servidor, você concorda que a responsabilidade pela segurança e preservação de seu personagem é inteiramente sua.</li>
+                <li>Caso um jogador deseje recuperar seu personagem perdido, poderá ser cobrada uma taxa de R$20. Recomendamos que você faça backups regulares e esteja ciente dos riscos envolvidos durante a jogabilidade.</li>
+                <li>A administração da cidade reserva-se o direito de encerrar o acesso a qualquer área, serviço ou evento a qualquer momento, se julgar necessário para manter a ordem, a segurança ou o andamento devido do servidor. O encerramento pode ocorrer sem aviso prévio e será comunicado através dos canais oficiais do servidor.</li>
+                <li>É proibida a aplicação de golpes; penalidade de advertência ou banimento, dependendo da gravidade da situação.</li>
+                <li>É proibido fazer RP como animal; você pode usar máscara e atender por nome de animal, mas lembre-se de que ainda é um ser humano, então retire a máscara em estabelecimentos legais.</li>
+                <li>É estritamente proibido trazer situações do RP para fora dele ou cobrar por algo relacionado ao RP fora do ambiente do RP.</li>
+                <li>Reembolsos de itens perdidos por crashes ou bugs serão concedidos mediante a apresentação de um clipe de vídeo que comprove o ocorrido.</li>
+                <li>É Proibido pichar em áreas safe, como delegacia, hospital, mecânica, entre outros locais protegidos.</li>
+            </ol>
+        </section>
+        
+        <section id="criadores" class="rules-section">
+            <h2><i class="fas fa-video"></i>Regras sobre Criadores de Conteúdo</h2>
+            <ol>
+                <li>As regras citadas aqui valem para TODOS os jogadores da cidade, seja criador de conteúdo ou não.</li>
+                <li>Aos criadores de conteúdo, é obrigatório deixar os VODs públicos.</li>
+                <li>É PROIBIDO qualquer discurso de ódio e/ou flaming durante as transmissões ou redes sociais.</li>
+                <li>É PROIBIDO o uso de termos que levem a entender que você está transmitindo ou gravando sua gameplay.</li>
+                <li>É PROIBIDO o uso de termos que levem a entender que você está assistindo a live de uma pessoa e/ou pegar informações das lives para utilizar dentro do jogo.</li>
+                <li>É PROIBIDO colocar qualquer tipo de música em locais públicos da cidade.</li>
+                <li>À toda a Administração da cidade, fica SIM permitido o uso de materiais das lives para aplicação de punições.</li>
+                <li>Ao realizar uma transmissão da sua gameplay na Street Car Club Roleplay, automaticamente você concorda que podemos utilizar os materiais da live para divulgação da cidade.</li>
+                <li>Para receber a tag de streamer no discord, será necessário a realização de lives por 5 (cinco) dias no intervalo de 01 semana (sete dias).</li>
+                <li>O descumprimento de qualquer regra citada, criador de conteúdo ou não, ocasionará em punição de acordo com a interpretação da Administração da cidade.</li>
+                <li>Ser criador de conteúdo, não isenta você de cumprir as regras. Então tenha atenção na conduta do seu roleplay.</li>
+            </ol>
+        </section>
 
-      <section id="gerais" class="rules-section">
-        <center>
-          <h2>Regras Gerais</h2>
-        </center>
-        <ol>
-          <li>
-            Todos os players devem estar atentos às regras do servidor, com base
-            no seu RP que está desenvolvendo. Caso não siga as regras, estão
-            sujeitos a advertências que podem ou não ser notificadas
-            previamente.
-          </li>
-          <li>
-            Proibido uso de linguagens ofensiva, racista, homofóbica e
-            xenofobia, publicação de material calunioso, abusivo ou que invada a
-            privacidade de alguém.
-          </li>
-          <li>É proibido o RDM, VDM, Powergaming, Metagaming, CarParking.</li>
-          <li>
-            É proibido o uso de cheating e programas auxiliares de mira, abusar
-            de exploits e bugs para se beneficiar.
-          </li>
-          <li>É proibido qualquer tipo de coop bait. O conceito de coop bait (ou "isca para cooperação") geralmente refere-se a situações em que jogadores simulam cenários ou comportamentos que incentivam a cooperação, mas com intenções secundárias que podem incluir enganos ou armadilhas.</li>
-          <li>É proibido agir sem amor à vida do personagem.</li>
-          <li>
-            Você não pode sair do roleplay em nenhum momento e de nenhuma forma,
-            podendo acabar em uma punição.
-          </li>
-          <li>
-            Faça o roleplay, sem levar para o pessoal. O que acontece no RP fica
-            no RP. Então fica proibido levar qualquer assunto para fora do RP,
-            indo no privado ou até mesmo no discord da cidade.
-          </li>
-          <li>
-            É totalmente proibido fazer qualquer chamado de qualquer serviço com
-            a intenção de assaltar ou emboscar alguém.
-          </li>
-          <li>
-            É totalmente proibido qualquer tipo de roubo ou furto no servidor. Descumprir essa regra poderá resultar em advertência ou banimento imediato.
-          </li>
-          <li>
-            Trate os policiais da forma que você trataria eles na vida real, não
-            provoque eles e não os xingue atoa.
-          </li>
-          <li>
-Quando você é nocauteado ou morto, é PROIBIDO lembrar-se do que ocorreu durante a ação, mesmo se o paramédico prestar atendimento; além disso, mesmo que alguém lhe relembre, você não pode voltar à ação.
-          </li>
-          <li>
-            Usar máscaras torna sua identidade irreconhecível, para a voz é
-            recomendado utilizar modificadores, sugestão: "ClownFish",
-            "VoiceMod", "MorphVox", "Voxal Voice Changer".
-          </li>
-          <li>
-            Em nenhuma hipótese os jogadores devem roubar uma viatura do
-            HOSPITAL ou da POLÍCIA;
-          </li>
-          <li>
-            Você deve respeitar o RP dos paramédicos e dos policiais por mais
-            que não concorde com a conduta;
-          </li>
-          <li>
-            Caso sofra alguma situação constrangedora, ou que ao seu ver
-            infrinja as regras, tire prints, produza provas e envie para alguém
-            do suporte.
-          </li>
-          <li>É proibido permanecer com a roupa padrão inicial do servidor.</li>
-          <li>
-            É proibido utilizar a farda da Polícia e se passar por um policial.
-          </li>
-          <li>É proibido intervir em abordagem policial.</li>
-          <li>
-            Proibido usar veículos de profissões legais para qualquer tipo de
-            atividade que não seja da profissão.
-          </li>
-          <li>
-            Proibido o uso de máscara nos seguintes locais: HOSPITAL, DP DE
-            POLÍCIA, MECÂNICA, PRAÇA E ESTABELECIMENTOS COMERCIAIS.
-          </li>
-          <li>É proibido o roubo a qualquer trabalhador de  legal.</li>
-          <li>
-              Os nomes devem ser coerentes com a realidade, sem conotação sexual ou nomes de marcas. O uso de um nome diferente na cidade e no e-mail resultará em advertência, podendo levar à exclusão do personagem, além de uma multa de R$ 100.000 e prisão de até 50 meses por falsidade ideológica. Para mudar de nome, é necessário ir à polícia, pagar R$ 25.000 e apresentar um motivo plausível em um ticket aberto.
+        <section id="cameramode" class="rules-section">
+            <h2><i class="fas fa-camera-retro"></i>Regras para o Uso do /CAMERAMODE</h2>
+            <ol>
+                <li>Fica terminantemente PROIBIDO o uso do /cameramode em ações;</li>
+                <li>Fica terminantemente PROIBIDO o uso do /cameramode para tirar proveito de situações dentro RP, este recurso é apenas para fins de criação de conteúdo;</li>
+                <li>O abuso deste recurso por moradores, sejam do legal ou ilegal, em ações e/ou em situações que interfiram no RP, resultará em PD (Permanent Death), reset de personagem e a depender do caso em banimento.</li>
+            </ol>
+        </section>
 
-          </li>
-          <li>
-            Todas as patentes da policia, e o cargo de Juíz(a) NÃO PODEM TER NENHUM ENVOLVIMENTO COM AS
-            ATIVIDADES ILEGAIS DA CIDADE.
-          </li>
-          <li>
-            É terminantemente proibido o farm de salário dos benefícios VIPs e empregos legais.
-          </li>
-          <li>
-            Ao sair de um serviço legal/ilegal e ir para outro legal/ilegal, você
-            deve esperar o prazo de 7 dias para ter um novo set.
-          </li>
-          <li>
-            Em caso de prisão de qualquer cidadão que possua carteira assinada,
-            esta deverá ser dada baixa em função da cadeia aplicada.
-          </li>
-          <li>
-            É proibido agir de má fé, anunciar produtos que não condizem com a
-            realidade e tentar enganar os demais por motivos financeiros e/ou
-            pessoais.
-          </li>
-          <li>
-            Benefícios vips, são pessoais e intransferíveis, fica
-            terminantemente proibida a vendas de bens adquiridos por moedas.
-          </li>
-          <li>Os benefícios VIP não são reembolsáveis sob alegações de insatisfação, ausência da cidade, banimentos ou advertências.
-          </li>
-          <li>
-            Enviar faturas, multas e/ou quaisquer outras cobranças indevidas a
-            moradores, é passível de punição interna no serviço.
-          </li>
-          <li>
-            Fazer caixa 2 em qualquer organização legal, resultará em banimento
-            ou PD, perda do personagem.
-          </li>
-          <li>
-            Qualquer tipo de zaralho, quebras bruscas de regras, desobediência à
-            ordem dos staffs, será punido com BAN, sem direito a segunda chance.
-          </li>
-          <li>
-            Em caso de não conexão por um prazo superior a 90 dias no servidor,
-            a WL e os bens do player serão removidos automaticamente para
-            otimização em nosso banco de dados.
-          </li>
-          <li>
-            A administração do servidor não se responsabiliza pela perda de personagens ou itens em decorrência de problemas técnicos, bugs, ações de outros jogadores ou decisões tomadas pelos usuários. Ao participar do servidor, você concorda que a responsabilidade pela segurança e preservação de seu personagem é inteiramente sua. 
-          </li>
-          <li>
-            Caso um jogador deseje recuperar seu personagem perdido, poderá ser cobrada uma taxa de R$20. Recomendamos que você faça backups regulares e esteja ciente dos riscos envolvidos durante a jogabilidade.
-          </li>
-          <li>A administração da cidade reserva-se o direito de encerrar o acesso a qualquer área, serviço ou evento a qualquer momento, se julgar necessário para manter a ordem, a segurança ou o andamento devido do servidor. O encerramento pode ocorrer sem aviso prévio e será comunicado através dos canais oficiais do servidor.</li>
-          <li>É proibida a aplicação de golpes; penalidade de advertência ou banimento, dependendo da gravidade da situação.</li>
-          <li>É proibido fazer RP como animal; você pode usar máscara e atender por nome de animal, mas lembre-se de que ainda é um ser humano, então retire a máscara em estabelecimentos legais.</li>
-       <li>É estritamente proibido trazer situações do RP para fora dele ou cobrar por algo relacionado ao RP fora do ambiente do RP.</li>
-          <li>Reembolsos de itens perdidos por crashes ou bugs serão concedidos mediante a apresentação de um clipe de vídeo que comprove o ocorrido.</li>
-          <li>É Proibido pichar em áreas safe, como delegacia, hospital, mecânica, entre outros locais protegidos.</li>
-        </ol>
-      </section>
-
-      <section id="criadores" class="rules-section">
-        <center>
-          <h2>Regras sobre Criadores de Conteúdo</h2>
-        </center>
-        <ol>
-          <li>
-            As regras citadas aqui valem para TODOS os jogadores da cidade, seja
-            criador de conteúdo ou não.
-          </li>
-          <li>
-            Aos criadores de conteúdo, é obrigatório deixar os VODs públicos.
-          </li>
-          <li>
-            É PROIBIDO qualquer discurso de ódio e/ou flaming durante as
-            transmissões ou redes sociais.
-          </li>
-          <li>
-            É PROIBIDO o uso de termos que levem a entender que você está
-            transmitindo ou gravando sua gameplay.
-          </li>
-          <li>
-            É PROIBIDO o uso de termos que levem a entender que você está
-            assistindo a live de uma pessoa e/ou pegar informações das lives
-            para utilizar dentro do jogo.
-          </li>
-          <li>
-            É PROIBIDO colocar qualquer tipo de música em locais públicos da
-            cidade.
-          </li>
-          <li>
-            À toda a Administração da cidade, fica SIM permitido o uso de
-            materiais das lives para aplicação de punições.
-          </li>
-          <li>
-            Ao realizar uma transmissão da sua gameplay na Street Car Club
-            Roleplay, automaticamente você concorda que podemos utilizar os
-            materiais da live para divulgação da cidade.
-          </li>
-          <li>
-            Para receber a tag de streamer no discord, será necessário a
-            realização de lives por 5 (cinco) dias no intervalo de 01 semana
-            (sete dias).
-          </li>
-          <li>
-            O descumprimento de qualquer regra citada, criador de conteúdo ou
-            não, ocasionará em punição de acordo com a interpretação da
-            Administração da cidade.
-          </li>
-          <li>
-            Ser criador de conteúdo, não isenta você de cumprir as regras. Então
-            tenha atenção na conduta do seu roleplay.
-          </li>
-        </ol>
-      </section>
-
-      <section id="cameramode" class="rules-section">
-        <center>
-          <h2>Regras para o Uso do /CAMERAMODE</h2>
-        </center>
-        <ol>
-          <li>Fica terminantemente PROIBIDO o uso do /cameramode em ações;</li>
-          <li>
-            Fica terminantemente PROIBIDO o uso do /cameramode para tirar
-            proveito de situações dentro RP, este recurso é apenas para fins de
-            criação de conteúdo;
-          </li>
-          <li>
-            O abuso deste recurso por moradores, sejam do legal ou ilegal, em
-            ações e/ou em situações que interfiram no RP, resultará em PD
-            (Permanent Death), reset de personagem e a depender do caso em
-            banimento.
-          </li>
-        </ol>
-      </section>
-
-      <section id="safezones" class="rules-section">
-        <center>
-          <h2>Safe-Zones</h2>
-        </center>
-        <p>
-São zonas seguras. Nestes locais e em até 100 metros ao redor, é proibido realizar qualquer tipo de ação, matar pessoas, ferir e sequestrar outros jogadores. É totalmente proibido correr para esses locais durante uma ação ou para evitar abordagens. Roubos e furtos de veículos também NÃO estão permitidos.
-        </p>
-        <ul>
-          <li>Praça;</li>
-          <li>Hospital;</li>
-          <li>Mecânicas;</li>
-          <li>Garagens;</li>
-          <li>Escritórios;</li>
-          <li>Concessionária;</li>
-          <li>Departamento de Polícia;</li>
-          <li>Prefeitura (centro de empregos);</li>
-          <li>Área de 500m de farms LEGAL;</li>
-          <li>Eventos e festas agendadas com a prefeitura. (Até 5 minutos depois do termino do evento)</li>
-        </ul>
-      </section>
-
-      <section id="zonavermelha" class="rules-section">
-        <center>
-          <h2>Zona Vermelha</h2>
-        </center>
-        <p>
-          As zonas vermelhas são os locais da cidade movidos por atividades
-          criminosas. Sendo assim, está permitido o uso do poder de fogo pelos
-          habitantes dessas áreas, o uso de arma de fogo só será permitido com
-          um contexto plausível para o RP.
-        </p>
-      </section>
-
-      <section id="especiais" class="rules-section">
-        <center>
-          <h2>Regras Especiais</h2>
-        </center>
-        <p>
-          Todas as regras foram feitas contando com o bom senso de todos e
-          esperamos isso de vocês. Nossa cidade possui regras flexíveis, curtas
-          e diretas. Isto não te dá motivos para agir de má fé e alegar que não
-          está explícito nas regras.
-        </p>
-      </section>
-
-      <section id="profissoes" class="rules-section">
-        <center>
-          <h2>Profissões</h2>
-        </center>
-        <ol>
-        <li>
-          Os donos de Empresas/Facções/Comandantes/Diretores, deverão ser
-          membros ativos do servidor, caso não tenha mais interesse em ser um
-          membro ativo o mesmo deverá passar o cargo de patrão para outra
-          pessoa.
-        </li>
-        <li>É proibido promover diretamente amigos, parentes ou pessoas próximas a cargos altos; todos devem começar nos níveis mais baixos e subir por mérito.
-        </li>
-        <li>O colaborador deve permanecer no mínimo 15 dias no emprego legal, sob pena de 10 dias de blacklist e multa de $250.000; ao pedir saída ou ser exonerado regularmente, recebe 7 dias de blacklist; se exonerado por inatividade ou infrações, recebe 10 dias de blacklist.</li>
-        <li>Proibido qualquer tipo de manifestação ou greve nos serviços públicos.</li>  
-        </ol>
-      </section>
-
-      <section id="chamados" class="rules-section">
-        <center>
-          <h2>Regras Chamados</h2>
-        </center>
-        <p>
-          Todos os chamados deverão CONTER DESCRIÇÃO da situação/problema. Todo
-          e qualquer chamado do tipo: "Me ajude/Socorro/Vem cá/Preciso conversar
-          com você/ADM quando der vem aqui/Quero comprar comida" serão
-          ignorados.
-        </p>
-      </section>
-
-      <section id="hospital" class="rules-section">
-        <center>
-          <h2>Regras Hospital</h2>
-        </center>
-        <ol>
-          <li>Não usar equipamento sonoro dentro do hospital.</li>
-          <li>
-            Não estacione o carro nas áreas reservadas para ambulâncias e na
-            porta do hospital.
-          </li>
-          <li>
-            Não atrapalhe o atendimento médico pedindo para ser atendido por
-            você ser mais urgente.
-          </li>
-          <li>
-            Paramédicos são neutros, sendo assim está proibido sequestrar ou
-            matar paramédicos em serviço.
-          </li>
-          <li>É proibido levantar jogadores que explodiram ou pegaram fogo.</li>
-        </ol>
-      </section>
-
-      <section id="policia" class="rules-section">
-        <center>
-          <h2>Regras Departamento de Polícia</h2>
-        </center>
-        <ol>
-          <li>
-            Não atrapalhe a interação do policial com outros cidadãos,
-            acreditando que a sua ocorrência é mais importante.
-          </li>
-          <li>
-            É terminantemente PROIBIDO corrupção de bens tangíveis dentro da
-            Polícia.
-          </li>
-        </ol>
-      </section>
-
-      <section id="comportamento" class="rules-section">
-        <center>
-          <h2>Comportamento em Áreas com Aglomerações</h2>
-        </center>
-        <ol>
-          <li>
-            Proibido ficar se socando, sendo ou não amigos, sendo brincadeira ou
-            não.
-          </li>
-          <li>Eventos e festas divulgados pela staff são Safe zones.</li>
-        </ol>
-      </section>
-
-      <section id="organizacoes" class="rules-section">
-        <center>
-          <h2>Organizações Criminosas</h2>
-        </center>
-        <ol>
-          <li>
-            Facções com 3 dias ou mais de inatividade, serão retomadas pelo
-            comando geral do ilegal sem aviso prévio.
-          </li>
-          <li>
-            As facções não podem se unir para realizar ações, os guetos são
-            obrigatoriamente rivais.
-          </li>
-          <li>
-            Todas as facções sem exceção, serão submetidas á uma facção de
-            controle superior que servirá de controle dentro do RP para
-            movimentar e controlar o ilegal.
-          </li>
-          <li>
-            Guetos e organizações não tem pvp liberado, sendo assim é
-            obrigatório RP antes de matar qualquer player.
-          </li>
-          <li>
-            Em casos de traição à sua organização seu personagem poderá ser
-            morto permanente.
-          </li>
-          <li>
-            O departamento de polícia investigativa, passará a realizar
-            investigações das facções de forma conjunta com a Suprema Corte de
-            Street Car Club Roleplay.
-          </li>
-          <li>
-            Facções podem ser invadidas por outras facções. Em caso de sucesso
-            na invasão, a facção vencedora poderá saquear e utilizar o farm por
-            um período de 6 horas.
-          </li>
-          <li>
-            O Departamento de Polícia poderá ser invadido para fazer a queima de
-            arquivos de investigações.
-          </li>
-          <li>
-            Carros usados para atividades ilegais serão procurados por 3 dias.
-          </li>
-          <li>
-            Indivíduos que forem presos terão a possibilidade de contratar um(a)
-            Advogado(a) pelo valor estipulado conforme os honorários.
-          </li>
-          <li>O limite de membros da facção são 20 (setados).</li>
-          <li>
-            Ao sair de qualquer organização ilegal, o cidadão deverá passar por
-            uma morte que o fará esquecer de tudo o que sabe sobre a atividade
-            do lugar onde trabalhava.
-          </li>
-          <li>
-            Todas as patentes da Policia e o cargo de Juíz (a) NÃO PODEM TER NENHUM ENVOLVIMENTO COM
-            AS ATIVIDADES ILEGAIS DA CIDADE.
-          </li>
-          <li>
-            Não pode haver união entre facções/organizações para realização de
-            ações puxadas.
-          </li>
-        </ol>
-      </section>
-
-      <section id="acoes" class="rules-section">
-        <center>
-          <h2>Regras Ações</h2>
-        </center>
-        <ol>
-          <li>
-            É totalmente proibido, antes, durante e após acabar uma ação,
-            realizar farpas e provocações com o(s) player(s) morto(s).
-          </li>
-          <li>O uso de binds em ações está totalmente proibido.</li>
-          <li>
-            Caso venha a crashar ou cair do servidor. Enviar print na sala do
-            Discord reportar-crashs.
-          </li>
-          <li>O loot dos policiais está totalmente proibido.</li>
-          <li>
-            Em todas as ações que houverem negociações em comum acordo dos dois
-            lados, fica EXPRESSAMENTE PROIBIDO a quebra do acordo selado.
-          </li>
-          <li>
-            O /E só é permitido caso não tenha nenhum paramédico em serviço após
-            o término da ação.
-          </li>
-          <li>
-            Em ações, é permitido o uso de apenas 01 colete a prova de balas
-            (somente o que está equipado) VÁLIDO PARA OS DOIS LADOS.
-          </li>
-          <li>Não é permitido o uso de kit médico em ações.</li>
-          <li>Sobre guerras entre facções/organizações.</li>
-          <li>Sobre confrontos de rua entre facções/organizações.</li>
-          <li>
-            O número máximo de reféns para qualquer ação, passa a ser de 06
-            (seis) pessoas.
-          </li>
-          <li>
-            É obrigatório informar quantos bandidos ficarão fora do local da
-            ação.
-          </li>
-          <li>
-            Nas ações que têm fuga como prioridade da mesma, fica PROIBIDO
-            portar qualquer arma de fogo para realizar as mesmas.
-          </li>
-          <li>
-            Independentemente do lado que <b>perder</b> a ação, todos os membros do <b>grupo perdedor</b> devem aceitar a luz.
-          </li>
-          <li>
-            O abuso do pixel em ações fechadas, lojinhas, ammunation, banco
-            central entre outros, é passível de advertência de acordo com a
-            visão da staff.
-          </li>
-          <li>
-            Em ações fechadas, fica obrigatório o rush, do lado com maior número
-            de membros.
-          </li>
-          <li>
-            Em caso de ações fechadas, fica obrigatório o uso das calls de ação
-            do discord, tanto a comum como a de cemitério.
-          </li>
-          <li>
-            Fica terminantemente proibido o desce e quebra, a cidade não é PVP.
-          </li>
-          <li>
-            Em caso do veículo capotar em uma fuga e cair com as rodas viradas
-            para o chão, você deverá descer do veículo e poderá continuar a fuga
-            a pé ou se entregar.
-          </li>
-          <li>
-            Caso você caia de moto durante uma fuga, considere a mesma como
-            perdida e se entregue.
-          </li>
-          <li>Em ações de rua, a ação deve encerrar em 5 minutos sem tiroteio, e médicos só podem reviver após esse período; descumprimento resulta em advertência.</li>
-          <li>É proibido o uso de roupa de mergulho durante qualquer tipo de ação; caso inicie uma troca de tiros, é obrigatório retirar a roupa de mergulho imediatamente.</li>
-        </ol>
-      </section>
-
-      <section id="permadeath" class="rules-section">
-        <center>
-          <h2>Permadeath (PD)</h2>
-        </center>
-        <p>
-          Permadeath consiste em fazer a história do seu personagem chegar ao
-          fim, em algumas situações você poderá perder o seu personagem e terá
-          que criar outro.
-        </p>
-      </section>
-
-      <section id="flaming" class="rules-section">
-        <center>
-          <h2>Flaming</h2>
-        </center>
-        <p>
-          Flaming é o ato de inflamar pessoas e/ou situações de forma negativa.
-          Incitando o ódio, farpas, ofensas, ameaças, etc. Contra algo ou
-          alguém.
-        </p>
-      </section>
-
-            <section id="Vehicle Deathmatch" class="rules-section">
-        <center>
-          <h2>Vehicle Deathmatch (VDM)</h2>
-        </center>
-        <p>
-        É estritamente proibido realizar Vehicle Deathmatch (VDM), que consiste em utilizar veículos para causar danos intencionais a outros jogadores, como atropelar grupos de jogadores com carros ou motos.
-        </p>
-      </section>
-
-                  <section id="Random Deathmatch" class="rules-section">
-        <center>
-          <h2>Random Deathmatch (RDM)</h2>
-        </center>
-        <p>
-        É terminantemente proibido cometer Random Deathmatch (RDM), que se caracteriza por matar outros jogadores sem motivo aparente, como atirar aleatoriamente em uma multidão; tal comportamento é inaceitável e pode resultar em banimento do servidor, considerando a seriedade com que o jogo é tratado.        </p>
-      </section>
-
-                        <section id="POWERGAMING" class="rules-section">
-        <center>
-          <h2>Powergaming (PG)</h2>
-        </center>
-        <p>
-É estritamente proibido realizar Powergaming (PG), que se refere a ações que desconsideram a realidade da vida, como sair ileso e caminhando normalmente após um acidente de carro; tais atos comprometem a simulação realista do jogo e são inaceitáveis.     
-                        </section>
-
-<section id="Metagaming" class="rules-section">
-        <center>
-          <h2>Metagaming (META)</h2>
-        </center>
-        <p>
-É proibido praticar Metagaming (MG), que envolve o uso de informações externas ao jogo para obter vantagem, como agir com base em detalhes conhecidos fora do jogo que seu personagem não tem conhecimento. Isso inclui o uso de call externa, onde jogadores se comunicam por meios fora do jogo para compartilhar informações indevidas. Tal prática compromete a integridade da jogabilidade e é inaceitável.</section>
-      
-      <section id="Combatlogging" class="rules-section">
-        <center>
-              <ol>
-          <h2>Combat Logging (CL)</h2>        </center>
-         <li> <b>Definição:</b> Combat Logging é a prática de desconectar intencionalmente do servidor durante uma situação de confronto, perseguição ou qualquer interação que possa resultar em consequências dentro do jogo. </li>
-           <li> <b>Tempo de Retorno:</b> Caso ocorra uma desconexão inesperada, o jogador tem 5 minutos para retornar ao servidor e continuar a situação. </li>
-          <li>  <b>Penalidade:</b> Se o jogador não retornar dentro do prazo estabelecido, será aplicada 1 advertência. Reincidências podem resultar em penalidades mais severas, conforme análise da administração. </li>
-           <li> <b>Exceções:</b> Em casos de problemas técnicos comprovados (exemplo: queda de energia ou internet), o jogador deve entrar em contato com a administração imediatamente para esclarecer a situação. </li>
-              </ol>
-              </section>
-
-      <section id="negociacoes" class="rules-section">
-        <center>
-          <h2>Negociações</h2>
-        </center>
-        <ol>
-          <li>
-            É totalmente proibido pedir para que o poder de fogo seja diminuído.
-          </li>
-          <li>
-            Toda negociação deve haver bom senso, ambos devem ceder para que
-            cheguem em um acordo.
-          </li>
-        </ol>
-      </section>
-
-      <section id="advertencias" class="rules-section">
-        <center>
-          <h2>Advertências</h2>
-        </center>
-        <p>
-          As advertências em nosso servidor, serão aplicadas de acordo com a
-          situação apresentada no RP. Todas irão ser acompanhadas da punição de
-          180 serviços dentro do jogo.
-        </p>
-        <p>
-          <b> OBS:</b> Todas advertências, se forem constatadas in-game, por
-          players (polícia), podem ser convertidas em 180 serviços direto, sem
-          adição de punição no discord da cidade. Lembrando que combos de
-          quebras, multiplicam os 180. Ex.: PG, Anti amor, CL. 540 serviços ou
-          ban.
-        </p>
-      </section>
+        <section id="safezones" class="rules-section">
+            <h2><i class="fas fa-shield-alt"></i>Safe-Zones</h2>
+            <p>São zonas seguras. Nestes locais e em até 100 metros ao redor, é proibido realizar qualquer tipo de ação, matar pessoas, ferir e sequestrar outros jogadores. É totalmente proibido correr para esses locais durante uma ação ou para evitar abordagens. Roubos e furtos de veículos também NÃO estão permitidos.</p>
+            <ul>
+                <li><i class="fas fa-tree"></i> Praça;</li>
+                <li><i class="fas fa-hospital"></i> Hospital;</li>
+                <li><i class="fas fa-tools"></i> Mecânicas;</li>
+                <li><i class="fas fa-warehouse"></i> Garagens;</li>
+                <li><i class="fas fa-briefcase"></i> Escritórios;</li>
+                <li><i class="fas fa-car"></i> Concessionária;</li>
+                <li><i class="fas fa-building"></i> Departamento de Polícia;</li>
+                <li><i class="fas fa-landmark"></i> Prefeitura (centro de empregos);</li>
+                <li><i class="fas fa-tractor"></i> Área de 500m de farms LEGAL;</li>
+                <li><i class="fas fa-glass-cheers"></i> Eventos e festas agendadas com a prefeitura (Até 5 minutos depois do termino do evento).</li>
+            </ul>
+        </section>
+        
+        <section id="advertencias" class="rules-section">
+            <h2><i class="fas fa-exclamation-triangle"></i>Advertências</h2>
+            <p>As advertências em nosso servidor, serão aplicadas de acordo com a situação apresentada no RP. Todas irão ser acompanhadas da punição de 180 serviços dentro do jogo.</p>
+            <p><b>OBS:</b> Todas advertências, se forem constatadas in-game, por players (polícia), podem ser convertidas em 180 serviços direto, sem adição de punição no discord da cidade. Lembrando que combos de quebras, multiplicam os 180. Ex.: PG, Anti amor, CL. 540 serviços ou ban.</p>
+        </section>
     </main>
+
     <center>
-      <rodap>
-        <b>
-          <p>© 2024 Street Car Club Roleplay. Todos os direitos reservados.</p>
-            <p style="font-size: 6px;">Noel Salvo de todas as regras!</p>
-        </b>
-      </rodap>
+        <rodap>
+            <b>
+                <p>© 2024 Street Car Club Roleplay. Todos os direitos reservados.</p>
+                <p style="font-size: 10px; opacity: 0.7;">Noel Salvo de todas as regras!</p>
+            </b>
+        </rodap>
     </center>
-  </body>
+</body>
 </html>
