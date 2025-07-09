@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
-        /* Estilos e Animações */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        /* Importar fontes */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
         :root {
-            --primary-color: #3a7dca; /* Azul do logo */
-            --secondary-color: #ffffff;
-            --background-color: #1a1a2e; /* Fundo escuro temático */
-            --card-background-color: #162447; /* Fundo dos cards de regras */
-            --text-color: #e0e0e0;
-            --header-footer-bg: #1f4068;
-            --border-color: #3a7dca;
+            --primary-color: #4A90E2;
+            --secondary-color: #7B68EE;
+            --accent-color: #FF6B6B;
+            --background-color: #0D1117;
+            --card-background: linear-gradient(135deg, #1C2333 0%, #2A3441 100%);
+            --text-color: #E6EDF3;
+            --text-secondary: #B6C2CF;
+            --border-color: #30363D;
+            --hover-color: #21262D;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #4A90E2 0%, #7B68EE 100%);
+            --gradient-secondary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
         }
 
-        /* Animação de fade-in */
-        @keyframes fadeIn {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Animações avançadas */
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
@@ -33,86 +44,436 @@
             }
         }
 
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(74, 144, 226, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(74, 144, 226, 0.6); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Scroll personalizado */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-color);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            border: 2px solid var(--background-color);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-color);
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(123, 104, 238, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
             color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Partículas de fundo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(123, 104, 238, 0.3), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255, 107, 107, 0.3), transparent);
+            background-size: 100px 100px;
+            animation: float 6s ease-in-out infinite;
+            z-index: -1;
         }
 
         header {
-            background-color: var(--header-footer-bg);
-            padding: 20px 0;
+            background: #131622; /* Fundo escuro sólido */
+            padding: 40px 0;
             text-align: center;
-            border-bottom: 3px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Remover gradiente antigo */
+            background: none;
+            animation: none;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff4d4d 60%, #ffb347 100%);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 8px 2px #ff4d4d99;
+            z-index: 3;
+        }
+
+        .logo {
+            position: relative;
+            z-index: 2;
         }
 
         .logo img {
-            max-width: 350px;
-            transition: transform 0.3s ease;
+            max-width: 400px;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .logo img:hover {
-            transform: scale(1.05); /* Animação de pulso ao passar o mouse */
+            transform: scale(1.08) rotate(2deg);
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
+        }
+
+        /* Navegação flutuante */
+        .nav-menu {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: var(--card-background);
+            border-radius: 25px;
+            padding: 20px 10px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-item {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 10px 0;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-item:hover::before {
+            left: 100%;
+        }
+
+        .nav-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
         }
 
         main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 30px;
         }
 
         .rules-section {
-            background-color: var(--card-background-color);
-            margin-bottom: 30px;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 0.8s ease-out forwards;
+            background: var(--card-background);
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 40px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out forwards;
+            transition: all 0.4s ease;
+        }
+
+        .rules-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .rules-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), transparent);
+        }
+
+        .rules-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px var(--shadow-color);
+        }
+
+        .rules-section:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        .rules-section:nth-child(odd) {
+            animation-delay: 0.4s;
         }
 
         h2 {
-            font-size: 2em;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-align: center;
+            font-size: 2.5em;
             font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
         }
         
-        h2 .fas { /* Ícone antes do título */
+        h2 .fas {
             margin-right: 15px;
+            font-size: 1.1em;
+            animation: pulse 2s infinite;
         }
 
         ol, ul {
-            padding-left: 20px;
+            padding-left: 30px;
         }
         
         li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            color: var(--primary-color);
+            transform: translateX(10px);
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
 
         b {
-            color: var(--primary-color);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
         }
-        
+
+        /* Melhorias para as sub-listas */
+        ul ul {
+            margin-top: 15px;
+            padding-left: 25px;
+        }
+
+        ul ul li {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+            background: rgba(74, 144, 226, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        ul ul li b {
+            color: var(--accent-color);
+            font-size: 1.1em;
+        }
+
+        ul ul li i {
+            color: var(--secondary-color);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* Safe-zones com ícones melhorados */
+        .safe-zone-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(123, 104, 238, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .safe-zone-item:hover {
+            background: rgba(123, 104, 238, 0.2);
+            transform: translateX(10px);
+        }
+
+        .safe-zone-item i {
+            margin-right: 15px;
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Rodapé melhorado */
         rodap {
             display: block;
-            background-color: var(--header-footer-bg);
-            color: var(--secondary-color);
-            padding: 20px;
-            margin-top: 40px;
+            background: #131622;
+            color: #fff;
+            padding: 16px 0;
+            margin-top: 30px;
             text-align: center;
-            border-top: 3px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
         }
+
+        rodap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            animation: none;
+        }
+
+        rodap p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #fff !important;
+            text-shadow: none !important;
+            opacity: 1 !important;
+        }
+
+        rodap p:last-child {
+            font-size: 12px;
+            opacity: 0.9 !important;
+            color: #fff !important;
+            text-shadow: none !important;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            main {
+                padding: 0 20px;
+            }
+            
+            .rules-section {
+                padding: 25px;
+                margin-bottom: 30px;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            .logo img {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rules-section {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            li {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Animações de entrada escalonadas */
+        .rules-section:nth-child(1) { animation-delay: 0.1s; }
+        .rules-section:nth-child(2) { animation-delay: 0.2s; }
+        .rules-section:nth-child(3) { animation-delay: 0.3s; }
+        .rules-section:nth-child(4) { animation-delay: 0.4s; }
+        .rules-section:nth-child(5) { animation-delay: 0.5s; }
+        .rules-section:nth-child(6) { animation-delay: 0.6s; }
+        .rules-section:nth-child(7) { animation-delay: 0.7s; }
     </style>
 </head>
 <body>
@@ -121,6 +482,28 @@
             <img src="https://i.imgur.com/GWaXxTS.png" alt="Street Car Club Roleplay Logo" />
         </div>
     </header>
+
+    <!-- Menu de navegação flutuante -->
+    <nav class="nav-menu">
+        <a href="#servidor" class="nav-item" title="Servidor">
+            <i class="fas fa-server"></i>
+        </a>
+        <a href="#discord" class="nav-item" title="Discord">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="#gerais" class="nav-item" title="Regras Gerais">
+            <i class="fas fa-gavel"></i>
+        </a>
+        <a href="#criadores" class="nav-item" title="Criadores">
+            <i class="fas fa-video"></i>
+        </a>
+        <a href="#cameramode" class="nav-item" title="Camera Mode">
+            <i class="fas fa-camera-retro"></i>
+        </a>
+        <a href="#safezones" class="nav-item" title="Safe Zones">
+            <i class="fas fa-shield-alt"></i>
+        </a>
+    </nav>
 
     <main>
         <section id="servidor" class="rules-section">
@@ -256,17 +639,17 @@
             <h2><i class="fas fa-shield-alt"></i>Safe-Zones</h2>
             <p>São zonas seguras. Nestes locais e em até 100 metros ao redor, é proibido realizar qualquer tipo de ação, matar pessoas, ferir e sequestrar outros jogadores. É totalmente proibido correr para esses locais durante uma ação ou para evitar abordagens. Roubos e furtos de veículos também NÃO estão permitidos.</p>
             <ul>
-                <li><i class="fas fa-tree"></i> Praça;</li>
-                <li><i class="fas fa-hospital"></i> Hospital;</li>
-                <li><i class="fas fa-tools"></i> Mecânicas;</li>
-                <li><i class="fas fa-warehouse"></i> Garagens;</li>
-                <li><i class="fas fa-briefcase"></i> Escritórios;</li>
-                <li><i class="fas fa-car"></i> Concessionária;</li>
-                <li><i class="fas fa-building"></i> Departamento de Polícia;</li>
-                <li><i class="fas fa-landmark"></i> Prefeitura (centro de empregos);</li>
-                <li><i class="fas fa-tractor"></i> Área de 500m de farms LEGAL;</li>
-                <li><i class="fas fa-glass-cheers"></i> Eventos e festas agendadas com a prefeitura (Até 5 minutos depois do termino do evento).</li>
-                <li><i class="fas fa-flag-checkered"></i> Corridas do Campeonato (Tablet de Corrida).</li>
+                <li class="safe-zone-item"><i class="fas fa-tree"></i> Praça</li>
+                <li class="safe-zone-item"><i class="fas fa-hospital"></i> Hospital</li>
+                <li class="safe-zone-item"><i class="fas fa-tools"></i> Mecânicas</li>
+                <li class="safe-zone-item"><i class="fas fa-warehouse"></i> Garagens</li>
+                <li class="safe-zone-item"><i class="fas fa-briefcase"></i> Escritórios</li>
+                <li class="safe-zone-item"><i class="fas fa-car"></i> Concessionária</li>
+                <li class="safe-zone-item"><i class="fas fa-building"></i> Departamento de Polícia</li>
+                <li class="safe-zone-item"><i class="fas fa-landmark"></i> Prefeitura (centro de empregos)</li>
+                <li class="safe-zone-item"><i class="fas fa-tractor"></i> Área de 500m de farms LEGAL</li>
+                <li class="safe-zone-item"><i class="fas fa-glass-cheers"></i> Eventos e festas agendadas com a prefeitura (Até 5 minutos depois do termino do evento)</li>
+                <li class="safe-zone-item"><i class="fas fa-flag-checkered"></i> Corridas do Campeonato (Tablet de Corrida)</li>
             </ul>
         </section>
         
@@ -279,10 +662,8 @@
 
     <center>
         <rodap>
-            <b>
-                <p>© 2024 Street Car Club Roleplay. Todos os direitos reservados.</p>
-                <p style="font-size: 10px; opacity: 0.7;">Noel Salvo de todas as regras!</p>
-            </b>
+            <p style="color: #fff; text-shadow: none; font-weight: bold;">© 2024 Street Car Club Roleplay. Todos os direitos reservados.</p>
+            <p style="color: #fff; text-shadow: none;">Noel Salvo de todas as regras!</p>
         </rodap>
     </center>
 </body>
