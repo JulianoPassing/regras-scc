@@ -499,6 +499,26 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
+
+        /* Alinhamento – Regras de Ações */
+        .acoes-card {
+            background: rgba(13, 13, 13, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(13, 13, 13, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        .acoes-card h4 { margin-bottom: 12px; font-size: 1.2em; flex-shrink: 0; }
+        .acoes-card p { margin: 0; line-height: 1.6; }
+        .acoes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: stretch; }
+        .acoes-grid .acoes-card { height: 100%; }
+        .acoes-box { background: rgba(234, 242, 7, 0.08); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(234, 242, 7, 0.3); }
+        .acoes-table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+        .acoes-table th, .acoes-table td { padding: 14px 12px; border: 1px solid var(--border-color); vertical-align: middle; }
+        .acoes-table th { background: rgba(234, 242, 7, 0.2); text-align: left; font-weight: 600; }
+        .acoes-table td { background: rgba(13, 13, 13, 0.2); }
+        .acoes-table tbody tr:nth-child(even) td { background: rgba(13, 13, 13, 0.35); }
     </style>
 </head>
 <body>
@@ -528,11 +548,11 @@
         <a href="#safezones" class="nav-item" title="Safe Zones">
             <i class="fas fa-shield-alt"></i>
         </a>
-        <a href="#acoes" class="nav-item" title="Regras de Ações">
-            <i class="fas fa-crosshairs"></i>
-        </a>
         <a href="#empregos" class="nav-item" title="Empregos Legais">
             <i class="fas fa-briefcase"></i>
+        </a>
+        <a href="#acoes" class="nav-item" title="Regras de Ações">
+            <i class="fas fa-crosshairs"></i>
         </a>
     </nav>
 
@@ -696,154 +716,6 @@
             </ul>
         </section>
 
-        <section id="acoes" class="rules-section">
-            <h2><i class="fas fa-crosshairs"></i>Regras de Ações – PvP/PvE</h2>
-            <p>Para mais detalhes, consulte o <a href="https://discord.com/channels/1046404063287332936/1217891250254905456" target="_blank" class="discord-link" style="color: var(--primary-color); font-weight: bold;"><i class="fab fa-discord discord-icon"></i>canal oficial de regras de ações</a> no Discord.</p>
-            
-            <div style="background: rgba(198, 196, 3, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(198, 196, 3, 0.3);">
-                <h3 style="color: var(--accent-color); font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
-                    <i class="fas fa-tshirt" style="margin-right: 12px;"></i>Roupa de Gangue
-                </h3>
-                <p style="text-align: center; margin: 0; font-size: 1.1em;">Deve ser usada apenas em ações e dominação. Fora disso será considerada associação criminosa e poderá gerar abordagem.</p>
-            </div>
-
-            <!-- Regras Gerais de Ações -->
-            <div style="background: rgba(234, 242, 7, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(234, 242, 7, 0.3);">
-                <h3 style="color: var(--primary-color); font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">
-                    <i class="fas fa-cogs" style="margin-right: 12px;"></i>Regras Gerais
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-clock" style="margin-right: 10px; color: var(--primary-color);"></i>Finalização de Ocorrências
-                        </h4>
-                        <p style="margin: 0; line-height: 1.6;">
-                            <b>7 minutos</b> — Tempo para finalizar ocorrências ao cessar fogo em ações de rua e liberar revistas.
-                        </p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-bolt" style="margin-right: 10px; color: var(--primary-color);"></i>Uso do Taser
-                        </h4>
-                        <p style="margin: 0; line-height: 1.6;">
-                            Uso somente para imobilizar indivíduos em caso de perigo por <b>arma branca</b> ou situações leves.
-                        </p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-exclamation-triangle" style="margin-right: 10px; color: #ff6363;"></i>Código 5
-                        </h4>
-                        <p style="margin: 0; line-height: 1.6;">
-                            Liberado ao identificar perigo à guarnição ou cidadão de bem. (Arma em posse ao descer do veículo - Puxar arma durante fuga e etc...)
-                        </p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-running" style="margin-right: 10px; color: var(--accent-color);"></i>Disparos em Fuga
-                        </h4>
-                        <p style="margin: 0; line-height: 1.6;">
-                            Tempo para bandido liberar disparos em fuga: <b>2 minutos</b>
-                        </p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-gavel" style="margin-right: 10px; color: var(--primary-color);"></i>Mandato de Prisão
-                        </h4>
-                        <p style="margin: 0; line-height: 1.6;">
-                            Prazo válido para concluir o mandato de prisão a um indivíduo: <b>24 horas</b>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Regras de Resgates -->
-            <div style="background: rgba(255, 99, 99, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(255, 99, 99, 0.3);">
-                <h3 style="color: #ff6363; font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #ff6363; padding-bottom: 10px;">
-                    <i class="fas fa-ambulance" style="margin-right: 12px;"></i>Resgates
-                </h3>
-                <p style="text-align: center; margin: 0; font-size: 1.1em; line-height: 1.6;">
-                    Após resgatar o corpo, a polícia tem <b>5 minutos</b> a partir da fuga do local de disparos para localizar o indivíduo e realizar a apreensão (mesmo que esteja dentro do HP).
-                </p>
-            </div>
-
-            <!-- Multas para Corridas Ilegais -->
-            <div style="background: rgba(198, 196, 3, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(198, 196, 3, 0.3);">
-                <h3 style="color: var(--accent-color); font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
-                    <i class="fas fa-flag-checkered" style="margin-right: 12px;"></i>Multas para Corridas Ilegais
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;">
-                            <i class="fas fa-exclamation" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 1º
-                        </h4>
-                        <p style="margin: 0; font-weight: 600;">Desobediência</p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;">
-                            <i class="fas fa-dollar-sign" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 5º
-                        </h4>
-                        <p style="margin: 0; font-weight: 600;">Posse de dinheiro sujo</p>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;">
-                            <i class="fas fa-flag" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 43º
-                        </h4>
-                        <p style="margin: 0; font-weight: 600;">Promover corridas ilegais</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Regras de Reviver -->
-            <div style="background: rgba(76, 175, 80, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(76, 175, 80, 0.3);">
-                <h3 style="color: #4CAF50; font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">
-                    <i class="fas fa-heartbeat" style="margin-right: 12px;"></i>Reviver
-                </h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-broadcast-tower" style="margin-right: 10px; color: #4CAF50;"></i>Ações Blipadas
-                        </h4>
-                        <div style="margin-bottom: 15px;">
-                            <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--accent-color);">Se o bandido ganhou:</p>
-                            <p style="margin: 0 0 15px 0; line-height: 1.5;">Acionar o médico para atendimento da polícia se possível.</p>
-                        </div>
-                        <div>
-                            <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary-color);">Se a polícia ganhou:</p>
-                            <p style="margin: 0; line-height: 1.5;">Revistar e acionar o médico para atendimento dos bandidos se possível.</p>
-                        </div>
-                    </div>
-                    
-                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
-                        <h4 style="color: var(--text-color); margin-bottom: 15px; font-size: 1.2em;">
-                            <i class="fas fa-road" style="margin-right: 10px; color: #4CAF50;"></i>Ações de Rua
-                        </h4>
-                        <div style="margin-bottom: 15px;">
-                            <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--accent-color);">Se o bandido ganhou:</p>
-                            <p style="margin: 0 0 15px 0; line-height: 1.5;">Recolher os corpos dos bandidos e sair da área.</p>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary-color);">Se a polícia ganhou:</p>
-                            <p style="margin: 0 0 15px 0; line-height: 1.5;">Revistar os corpos dos bandidos e sair da área.</p>
-                        </div>
-                        <div>
-                            <p style="margin: 0 0 10px 0; font-weight: 600; color: #ff6363;">Acidente de trânsito:</p>
-                            <p style="margin: 0; line-height: 1.5;">Se o indivíduo desmaia em um acidente de trânsito, revive os bandidos e prende.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
         <section id="empregos" class="rules-section">
             <h2><i class="fas fa-briefcase"></i>Regras de Empregos Legais</h2>
             
@@ -913,6 +785,437 @@
                     </p>
                 </div>
             </div>
+        </section>
+
+        <section id="acoes" class="rules-section">
+            <h2><i class="fas fa-crosshairs"></i>Regras de Ações – PvP/PvE</h2>
+            <p>Para mais detalhes, consulte o <a href="https://discord.com/channels/1046404063287332936/1217891250254905456" target="_blank" class="discord-link" style="color: var(--primary-color); font-weight: bold;"><i class="fab fa-discord discord-icon"></i>canal oficial de regras de ações</a> no Discord.</p>
+            
+            <div style="background: rgba(198, 196, 3, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(198, 196, 3, 0.3);">
+                <h3 style="color: var(--accent-color); font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
+                    <i class="fas fa-tshirt" style="margin-right: 12px;"></i>Roupa de Gangue
+                </h3>
+                <p style="text-align: center; margin: 0; font-size: 1.1em;">Deve ser usada apenas em ações e dominação. Fora disso será considerada associação criminosa e poderá gerar abordagem.</p>
+            </div>
+
+            <!-- REGRAS GERAIS – POLÍCIA x BANDIDO -->
+            <div style="background: rgba(234, 242, 7, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(234, 242, 7, 0.3);">
+                <h3 style="color: var(--primary-color); font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">
+                    <i class="fas fa-cogs" style="margin-right: 12px;"></i>Regras Gerais – Polícia x Bandido
+                </h3>
+                
+                <div class="acoes-grid">
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-procedures" style="margin-right: 10px; color: var(--primary-color);"></i>1. Corpo da Polícia
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫 Proibido</span> pegar corpo da POLÍCIA para levar ao necrotério. Policiais seguem procedimento padrão por serem servidores públicos.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-bolt" style="margin-right: 10px; color: var(--primary-color);"></i>2. Taser
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> POLÍCIA não utiliza TASER em fugas a pé.<br>
+                            <span style="color: #4CAF50;">✔️</span> Caso não haja opção de derrubar, é permitido algemar ao se aproximar.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-exclamation-triangle" style="margin-right: 10px; color: #ff6363;"></i>3. Código 5 – Disparos
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #4CAF50;">⏱️</span> Liberado após <b>10 minutos</b> de fuga limpa.<br>
+                            <span style="color: #4CAF50;">✔️</span> Em caso de quebra de regra, pode atirar antes dos 10 minutos.<br>
+                            <span style="color: var(--accent-color);">🔫</span> BANDIDOS só podem atirar após <b>2 minutos</b> de fuga (priorize escapar).
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-road" style="margin-right: 10px; color: var(--primary-color);"></i>4. Ação de Rua
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #4CAF50;">⏱️</span> Encerrada após <b>7 minutos</b> sem disparos.<br>
+                            <span style="color: var(--accent-color);">👮</span> Após esse tempo, a POLÍCIA pode revistar.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-users" style="margin-right: 10px; color: var(--accent-color);"></i>5. QRR dos Bandidos
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #4CAF50;">⏱️</span> Pode chegar até <b>7 minutos</b> após o início dos tiros.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-hands" style="margin-right: 10px; color: #4CAF50;"></i>6. Rendição
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            Após rendição (mãos levantadas):<br>
+                            <span style="color: #ff6363;">🚫</span> Proibido passar rádio<br>
+                            <span style="color: #ff6363;">🚫</span> Proibido sacar arma<br>
+                            <span style="color: #ff6363;">🚫</span> Proibido fugir
+                        </p>
+                        <p style="margin: 10px 0 0 0; font-size: 0.95em;">
+                            <b>6.1. QRR após rendição:</b> Se o QRR já foi solicitado, pode chegar até o meliante ser colocado na viatura.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-lightbulb" style="margin-right: 10px; color: var(--primary-color);"></i>7. Giroflex
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚨</span> Obrigatório para policiais em QRU ou durante abordagem.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-car-crash" style="margin-right: 10px; color: #ff6363;"></i>8. Veículo Danificado em Fuga
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            Se o veículo bater a lateral no chão ou capotar:<br>
+                            ➜ Deve descer e continuar a fuga a pé ou se render.<br>
+                            <span style="color: #ff6363;">❌</span> Se continuar dirigindo, será liberado CÓDIGO 3 nos pneus.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-exchange-alt" style="margin-right: 10px; color: var(--accent-color);"></i>9. Troca de Veículo em Fuga
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> Trocar de veículo libera CÓDIGO 3 nos pneus.<br>
+                            <span style="color: var(--accent-color);">🔫</span> Persistindo a fuga, será liberado CÓDIGO 5.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-car" style="margin-right: 10px; color: #ff6363;"></i>10. Disparos em Veículos
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> Proibido atirar pelo vidro traseiro de carros coupé.<br>
+                            <span style="color: var(--text-secondary);">📌</span> Limitação do GTA torna essa área blindada.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-swimmer" style="margin-right: 10px; color: var(--primary-color);"></i>11. Roupa de Mergulho
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> Proibido uso durante ações.<br>
+                            <span style="color: var(--accent-color);">🔫</span> Iniciou troca de tiros → retirada imediata.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-tire" style="margin-right: 10px; color: #ff6363;"></i>12. Pneus Danificados
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> Proibido usar durante ações:<br>
+                            • Moto com pneu furado<br>
+                            • Carro com 3 ou 4 pneus furados
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-building" style="margin-right: 10px; color: var(--accent-color);"></i>13. Drop em Telhados / Prédios
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            <span style="color: #ff6363;">🚫</span> Proibido dropar pessoas em telhados ou prédios.<br>
+                            <span style="color: #4CAF50;">✔️</span> Permitido apenas no chão ou em locais com acesso por escadas ou meios naturais.
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-shield-alt" style="margin-right: 10px; color: var(--primary-color);"></i>14. Uso de Força – Polícia
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            POLÍCIA pode atirar quando:<br>
+                            • Bandido estiver com arma em mãos<br>
+                            • Houver risco iminente
+                        </p>
+                    </div>
+                    
+                    <div class="acoes-card">
+                        <h4 style="color: var(--text-color);">
+                            <i class="fas fa-gavel" style="margin-right: 10px; color: var(--primary-color);"></i>Mandato de Prisão
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            Prazo válido para concluir o mandato de prisão a um indivíduo: <b>24 horas</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QSV – LIMITE PADRÃO DE CONTINGENTE -->
+            <div style="background: rgba(78, 205, 196, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(78, 205, 196, 0.3);">
+                <h3 style="color: #4ECDC4; font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #4ECDC4; padding-bottom: 10px;">
+                    <i class="fas fa-shield-alt" style="margin-right: 12px;"></i>QSV – Limite Padrão de Contingente
+                </h3>
+                <p style="text-align: center; margin-bottom: 15px; font-size: 1.05em;">Aplicável em: Furto de veículos • Caixinha • Desmanche • Petrolífera • Fuga • Ação de rua • Galpão</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(78, 205, 196, 0.3);">
+                        <p style="margin: 0; font-weight: 600; color: #4ECDC4;">Opção 1</p>
+                        <p style="margin: 10px 0 0 0;">✔️ 1 VTR + 2 GTM + 1 SPEED</p>
+                    </div>
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(78, 205, 196, 0.3);">
+                        <p style="margin: 0; font-weight: 600; color: #4ECDC4;">Opção 2</p>
+                        <p style="margin: 10px 0 0 0;">✔️ 2 VTR + 1 GTM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ÁGUIA E HELICÓPTERO -->
+            <div style="background: rgba(255, 152, 0, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(255, 152, 0, 0.3);">
+                <h3 style="color: #FF9800; font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #FF9800; padding-bottom: 10px;">
+                    <i class="fas fa-helicopter" style="margin-right: 12px;"></i>Águia e Helicóptero
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.2em;">
+                            <i class="fas fa-helicopter" style="margin-right: 10px;"></i>Águia (Helicóptero)
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            ✔️ Permitido somente para contato visual<br>
+                            🔫 Pode atirar apenas durante QRR
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.2em;">
+                            <i class="fas fa-user-shield" style="margin-right: 10px;"></i>Polícia – Helicóptero
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            ✔️ Permitido somente para visual: Desmanche, Caixinha, Furto de veículos<br>
+                            🚫 Proibido dropar pessoas em telhados ou prédios<br>
+                            ✔️ Permitido apenas no chão ou locais com escadas/meios naturais
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.2em;">
+                            <i class="fas fa-user" style="margin-right: 10px;"></i>Bandidos – Helicóptero
+                        </h4>
+                        <p style="margin: 0; line-height: 1.6;">
+                            🚫 Proibido: fugir, iniciar ações, dropar em telhados/prédios<br>
+                            ✔️ Permitido apenas em QRR em ações de rua (após início da perseguição)<br>
+                            ✔️ Apenas no chão ou locais com acesso natural
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AÇÃO DE RUA (consolidada) -->
+            <div style="background: rgba(76, 175, 80, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(76, 175, 80, 0.3);">
+                <h3 style="color: #4CAF50; font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">
+                    <i class="fas fa-road" style="margin-right: 12px;"></i>Ação de Rua
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(76, 175, 80, 0.3);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 12px;">✔️ Polícia venceu</h4>
+                        <p style="margin: 0; line-height: 1.6;">Revista os bandidos e leva para o IML.</p>
+                    </div>
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(76, 175, 80, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;">✔️ Bandidos venceram</h4>
+                        <p style="margin: 0; line-height: 1.6;">Devem fugir imediatamente, prevendo reforço policial.</p>
+                    </div>
+                </div>
+                <p style="margin: 20px 0 0 0; text-align: center; font-weight: 600;">
+                    📌 O lado perdedor deve aceitar a luz<br>
+                    <span style="color: #ff6363;">🚫 Proibido usar /chamarambulancia</span>
+                </p>
+            </div>
+
+            <!-- USO DE CAPACETE -->
+            <div style="background: rgba(156, 39, 176, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(156, 39, 176, 0.3);">
+                <h3 style="color: #9C27B0; font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #9C27B0; padding-bottom: 10px;">
+                    <i class="fas fa-hard-hat" style="margin-right: 12px;"></i>Uso de Capacete
+                </h3>
+                <p style="margin: 0 0 15px 0; line-height: 1.6;">
+                    <span style="color: #ff6363;">🚫</span> Proibido uso de capacete em: ações de rua, ações blipadas.<br>
+                    <span style="color: #4CAF50;">✔️</span> Permitido capacete automático apenas ao subir na moto durante fugas.<br>
+                    <span style="color: #FF9800;">⚠️</span> Fora situações de fuga, é obrigatório permanecer sem capacete em qualquer ação.
+                </p>
+            </div>
+
+            <!-- REGRAS POR LOCALIDADE -->
+            <div style="background: rgba(198, 196, 3, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(198, 196, 3, 0.3);">
+                <h3 style="color: var(--accent-color); font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 12px;"></i>Regras por Localidade
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(198, 196, 3, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;"><i class="fas fa-money-bill-wave"></i> Caixa Eletrônico</h4>
+                        <p style="margin: 0; line-height: 1.6;">✔️ Priorizar a fuga • ✔️ Pode ir armado • ⏱️ Disparos liberados após 2 minutos de fuga</p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(198, 196, 3, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;"><i class="fas fa-warehouse"></i> Armazém</h4>
+                        <p style="margin: 0 0 10px 0; line-height: 1.6;">✔️ Priorizar o tiroteio • 👮 Polícia: até 8 • 🕵️ Bandidos: até 7</p>
+                        <p style="margin: 0; font-size: 0.95em; color: var(--text-secondary);">🚫 Marcar entrada/saída, rodar veículos, entrada após início, helicóptero, chamar médicos antes do fim</p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(198, 196, 3, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;"><i class="fas fa-flag"></i> Dominação de TR</h4>
+                        <p style="margin: 0 0 10px 0; line-height: 1.6;">✔️ Uso obrigatório da roupa da organização</p>
+                        <p style="margin: 0 0 10px 0; font-size: 0.95em;">🚫 Pixação, matar, venda de drogas em área SAFE • ⏳ Cooldown: 1 hora após perder</p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(198, 196, 3, 0.3);">
+                        <h4 style="color: #ff6363; margin-bottom: 12px;"><i class="fas fa-gas-pump"></i> Petrolífera</h4>
+                        <p style="margin: 0; line-height: 1.6;">🔴 Zona vermelha • 🔫 Tiroteio liberado em toda a área</p>
+                    </div>
+                    
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(198, 196, 3, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;"><i class="fas fa-tools"></i> Desmanche</h4>
+                        <p style="margin: 0; line-height: 1.6;">🚫 Proibido remover peças antes de iniciar: Capô, Porta-malas, Portas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REGRAS AÇÕES BLIPADAS -->
+            <div style="background: rgba(255, 99, 99, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(255, 99, 99, 0.3);">
+                <h3 style="color: #ff6363; font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #ff6363; padding-bottom: 10px;">
+                    <i class="fas fa-broadcast-tower" style="margin-right: 12px;"></i>Regras – Ações Blipadas
+                </h3>
+                
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>Lado com MAIOR CONTINGENTE</b> sempre rusha • ⏱️ 10 minutos para rush
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        Não haverá negociação
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        Ação aceita → 🔥 <b>FOGO LIVRE LIBERADO</b>
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        Proibido alterar a posição do corpo durante a ação
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>Bandido ganhou:</b> Apenas sai do local
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>Polícia ganhou:</b> Revista e deixa os corpos no local
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        Obrigatório entrar na call da ação 🎧 (da Ammu até o Nióbio)
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(255, 99, 99, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>PROIBIDO:</b> Reféns • Bombas de gás • Molotovs • Redução de poder de fogo
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>Quantidade de Policiais:</b> Sempre 1 a mais • ⚠️ Exceto Tequi-La-La, Bancos e Nióbio
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        <b>Helicóptero liberado somente:</b> Banco de Paleto • Banco Central
+                    </li>
+                    <li style="margin-bottom: 15px; padding: 15px; background: rgba(13, 13, 13, 0.2); border-radius: 10px; border-left: 4px solid #ff6363;">
+                        Piloto e atirador contam na ação • 🚫 Após descer, não podem retornar • 🚫 Proibido descer em construções sem escada • 🚫 Proibido alterar posição dos corpos
+                    </li>
+                </ul>
+            </div>
+
+            <!-- MÉDICO / FIM DE AÇÃO BLIPADA -->
+            <div style="background: rgba(76, 175, 80, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(76, 175, 80, 0.3);">
+                <h3 style="color: #4CAF50; font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">
+                    <i class="fas fa-ambulance" style="margin-right: 12px;"></i>Médico / Fim de Ação Blipada
+                </h3>
+                <p style="text-align: center; margin-bottom: 20px; font-weight: 600;">🩺 Médico liberado somente após o fim da ação • 🏆 Lado vencedor é levantado primeiro</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(76, 175, 80, 0.3);">
+                        <h4 style="color: var(--primary-color); margin-bottom: 12px;">Bandidos perderam</h4>
+                        <p style="margin: 0; line-height: 1.6;">Polícia recolhe itens ilegais e sai do local</p>
+                    </div>
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 12px; padding: 20px; border: 1px solid rgba(76, 175, 80, 0.3);">
+                        <h4 style="color: var(--accent-color); margin-bottom: 12px;">Bandidos venceram</h4>
+                        <p style="margin: 0; line-height: 1.6;">Podem chamar o médico • Levantam seu pessoal primeiro • Devem sair do local em seguida</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regras de Resgates -->
+            <div style="background: rgba(255, 99, 99, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(255, 99, 99, 0.3);">
+                <h3 style="color: #ff6363; font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #ff6363; padding-bottom: 10px;">
+                    <i class="fas fa-ambulance" style="margin-right: 12px;"></i>Resgates
+                </h3>
+                <p style="text-align: center; margin: 0; font-size: 1.1em; line-height: 1.6;">
+                    Após resgatar o corpo, a polícia tem <b>5 minutos</b> a partir da fuga do local de disparos para localizar o indivíduo e realizar a apreensão (mesmo que esteja dentro do HP).
+                </p>
+            </div>
+
+            <!-- Multas para Corridas Ilegais -->
+            <div style="background: rgba(198, 196, 3, 0.1); border-radius: 15px; padding: 25px; margin: 30px 0; border: 1px solid rgba(198, 196, 3, 0.3);">
+                <h3 style="color: var(--accent-color); font-size: 1.6em; margin-bottom: 20px; text-align: center; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px;">
+                    <i class="fas fa-flag-checkered" style="margin-right: 12px;"></i>Multas para Corridas Ilegais
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;"><i class="fas fa-exclamation" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 1º</h4>
+                        <p style="margin: 0; font-weight: 600;">Desobediência</p>
+                    </div>
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;"><i class="fas fa-dollar-sign" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 5º</h4>
+                        <p style="margin: 0; font-weight: 600;">Posse de dinheiro sujo</p>
+                    </div>
+                    <div style="background: rgba(13, 13, 13, 0.1); border-radius: 10px; padding: 15px; text-align: center; border: 1px solid rgba(13, 13, 13, 0.3);">
+                        <h4 style="color: var(--text-color); margin-bottom: 10px; font-size: 1.1em;"><i class="fas fa-flag" style="margin-right: 8px; color: var(--accent-color);"></i>Art. 43º</h4>
+                        <p style="margin: 0; font-weight: 600;">Promover corridas ilegais</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABELA DE LOCAIS BLIPADOS -->
+            <div class="acoes-box" style="overflow-x: auto;">
+                <h3 style="color: var(--primary-color); font-size: 1.6em; margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">
+                    <i class="fas fa-store" style="margin-right: 12px;"></i>Locais Blipados – Configuração
+                </h3>
+                <table class="acoes-table">
+                    <thead>
+                        <tr>
+                            <th>Local</th>
+                            <th>Bandidos</th>
+                            <th>Itens</th>
+                            <th>Armas</th>
+                            <th>Polícia</th>
+                            <th>Observações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>💈 Barbearia</td><td>2–3</td><td>Furadeira</td><td>Apenas soco</td><td>Mesma quantidade</td><td>Todos do lado de fora</td></tr>
+                        <tr><td>🛡️ Ammunation</td><td>2–3</td><td>Maçarico Portátil</td><td>Pistola</td><td>1 a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>🏪 Loja de Conveniência</td><td>2–4</td><td>Maçarico Portátil</td><td>Pistola</td><td>1 a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>💎 Joalheria</td><td>4–6</td><td>Crachá Clonado Nível 1</td><td>Pistola</td><td>1 a mais</td><td>≥5 bandidos: 1 fora</td></tr>
+                        <tr><td>🐔 Galinheiro</td><td>4–7</td><td>Crachá Clonado Nível 1</td><td>SMG</td><td>1 a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>🥩 Açougue</td><td>4–7</td><td>Crachá Clonado Nível 1</td><td>SMG</td><td>1 a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>🏦 Banco Flecca</td><td>4–7</td><td>Crachá Clonado Nível 1</td><td>SMG</td><td>1 a mais</td><td>≥6 bandidos: 2 fora</td></tr>
+                        <tr><td>🍹 Tequi-La-La</td><td>4–7</td><td>Crachá Clonado Nível 1</td><td>SMG</td><td>2 policiais a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>🏦 Banco Paleto</td><td>5–10</td><td>Crachá Clonado Nível 2</td><td>Fuzil</td><td>1 a mais</td><td>≥7 bandidos: 2 fora • 🚁 Helicóptero Polícia</td></tr>
+                        <tr><td>🏦 Banco Central</td><td>6–10</td><td>Crachá Clonado Nível 2</td><td>Fuzil</td><td>1 a mais</td><td>≥8 bandidos: 2 fora • 🚁 Helicóptero Polícia</td></tr>
+                        <tr><td>🧪 Nióbio</td><td>10–16</td><td>Crachá Clonado Nível 3</td><td>Fuzil e Shotgun</td><td>2 policiais a mais</td><td>Não permitido bandido fora</td></tr>
+                        <tr><td>🏠 Roubo de Casas</td><td>1–3</td><td>Lockpick</td><td>Apenas soco</td><td>Até 4 policiais</td><td>Ação válida com visual</td></tr>
+                        <tr><td>🏎️ Corrida Ilegal</td><td>1</td><td>Ticket de Corrida</td><td>Proibido armamento</td><td>Até 3 VTRs</td><td>GTM só se bandido de moto • 🚫 Disparos</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
         
         <section id="advertencias" class="rules-section">
